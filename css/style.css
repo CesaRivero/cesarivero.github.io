@@ -1,3 +1,13 @@
 body{
     background-color: yellow;
 }
+#centro{
+  text-align: center;
+  border-radius: 2em;
+  background-color: salmon;
+  color: yellow;
+}
+button{
+  margin-bottom: 1em;
+  font-size: 2em;
+}
