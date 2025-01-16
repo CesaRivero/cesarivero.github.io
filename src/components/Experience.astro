@@ -1,0 +1,25 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "2023 - Actualidad",
+    title: "Analista Funcional - Enta Consulting",
+    description: "Análisis y documentación de procesos empresariales.Adaptación a entornos dinámicos y documentación detallada de procesos y requisitos.",
+  },
+  {
+    date: "2019-2022",
+    title: "Personal Shopper - Rappi Argentina",
+    description: "Liderazgo de un equipo, gestión de atención al cliente, supervisión del personal y resolución de problemas operativos para garantizar una entrega óptima del servicio.",
+    
+  }
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCIE.map((experience) => (
+        <li class="mb-5 ms-4"></li>
+        <ExperienceItem {...experience} />
+        ))}
+</ol>

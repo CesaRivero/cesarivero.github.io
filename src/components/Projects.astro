@@ -1,0 +1,57 @@
+---
+import ReactIcon from "../icons/React.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+const TAGS ={
+    REACT:{
+        name:"React",
+        class:"bg-black text-white",
+        icon:ReactIcon
+    },
+    NEXT:{
+        name:"Next.js",
+        class:"bg-white text-[#73bcf6]",
+        icon:ReactIcon
+    },
+    TAILWIND:{
+        name:"Tailwind CSS",
+        class:"bg-[#003159] text-white",
+        icon:TailwindIcon
+    },
+}
+const PROJETCS = [
+  {
+    title: "Ranchapp",
+    description:
+      "Aplicacion de creacion y gestion de eventos",
+    link: "https://ranchapp.com.ar/",
+    github: "#",
+    image:"/projects/svgl.webp",
+    tags: [TAGS.REACT,TAGS.TAILWIND],
+  },
+  
+ 
+  
+];
+---
+
+{
+  PROJETCS.map(({ title, description, image,tags }) => (
+    <article class="ml-3 mb-6">
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 mb-2`}>
+                <tag.icon class="size-3"/>
+                {tag.name}
+            </span>
+            </li>
+        ))}
+      </ul>
+      <img
+      class="rounded shadow-2xl shadow-white/10 mb-2" 
+      src={image} alt=`Captura de pantalla de ${title}` />
+    </article>
+  ))
+}

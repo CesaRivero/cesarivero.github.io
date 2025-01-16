@@ -1,11 +1,66 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CodeIcon from "../icons/Code.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Briefcase from "../icons/briefcase.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import UserIcon from "../icons/User.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout title="Porfolio de César Rivero - Desarrollador">
+  <main class="px-4">
+    <SectionContainer class="py-20 pb-14">
+      <img
+        class="rounded-full size-20 mb-4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdIdt1JoRG_n5XM70IXS9nDnUUoe1xp0JPQ&s"
+        alt="Foto perfil"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex-row gap-x-4 pb-4 lg:pb-8"
+      >
+        Hey, soy César
+      </h1>
+      <h2
+        class="text-xs mb-6 md:text-xl lg:xl opacity-65 text-wrap max-w-[500px]"
+      >
+        Desarrollador de sofware y analista de sistemas Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Ipsam autem modi soluta delectus
+      </h2>
+      <nav class="flex gap-4 mt-2 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/cesar-rivero23/">
+          <LinkedInIcon class="size-4 lg:size-5" /> LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/CesaRivero">
+          <GitHubIcon class="size-4 lg:size-5" /> GitHub
+        </SocialPill>
+        <SocialPill href="mailto:cesar_tomas_rivero@hotmail">
+          <MailIcon class="size-4 lg:size-5" /> Contactame!
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <UserIcon class="size-8" />Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main></Layout
+>
